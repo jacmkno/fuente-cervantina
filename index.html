@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pacifico&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'MonteCarlo', sans-serif;
+    }
+    
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    #text-area {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 16px;
+      font-family: 'Pinyon Script', cursive;
+      resize: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    #output-montecarlo, #output-pacifico, #output-pinyon {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    #output-montecarlo {
+      font-family: 'MonteCarlo', sans-serif;
+    }
+    
+    #output-pacifico {
+      font-family: 'Pacifico', cursive;
+    }
+    
+    #output-pinyon {
+      font-family: 'Pinyon Script', cursive;
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Text Area</h1>
+  <textarea id="text-area" placeholder="Type something here"></textarea>
+  <div id="output-montecarlo"></div>
+  <div id="output-pacifico"></div>
+  <div id="output-pinyon"></div>
+  <script>
+    const textArea = document.getElementById("text-area");
+    const outputMonteCarlo = document.getElementById("output-montecarlo");
+    const outputPacifico = document.getElementById("output-pacifico");
+    const outputPinyon = document.getElementById("output-pinyon");
+
+    textArea.addEventListener("input", () => {
+      outputMonteCarlo.textContent = textArea.value;
+      outputPacifico.textContent = textArea.value;
+      outputPinyon.textContent = textArea.value;
+    });
+  </script>
+</body>
+</html>
